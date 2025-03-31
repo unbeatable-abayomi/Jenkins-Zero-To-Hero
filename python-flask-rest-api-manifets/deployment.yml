@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python-rest-flask-api
-        image: igwubor/ultimate-cicd-pipeline:21
+        image: igwubor/python-rest-api:21
         ports:
         - containerPort: 9001
