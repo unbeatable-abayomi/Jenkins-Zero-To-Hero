@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-rest-flask-api
+  labels:
+    app: python-rest-flask-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-rest-flask-api
+  template:
+    metadata:
+      labels:
+        app: python-rest-flask-api
+    spec:
+      containers:
+      - name: python-rest-flask-api
+        image: igwubor/ultimate-cicd-pipeline:replaceImageTag
+        ports:
+        - containerPort: 9001
