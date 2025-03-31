@@ -12,25 +12,16 @@ pipeline {
 		stage('Checkout'){
 		   steps {
 		sh 'echo passed'
-    sh '''
-ls -ltr  
-cd python-flask-rest-api'''
-
-		git branch: 'main', url: 'https://github.com/unbeatable-abayomi/Jenkins-Zero-To-Hero.git'
-
-
+		//git branch: 'main', url: 'https://github.com/unbeatable-abayomi/Jenkins-Zero-To-Hero.git'
 		   }
 		}
 
 		stage('Build Docker'){
 			steps{
 				script{
-					sh '''
 					echo 'Build Docker Image'
                                         sh 'ls -ltr'
-					sh 'cd python-flask-rest-api && docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
-					
-					'''
+					sh 'cd python-flask-rest-api/ && docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
 				}
 			}
 		}
