@@ -21,7 +21,10 @@ pipeline {
 				script{
 					echo 'Build Docker Image'
                     sh 'ls -ltr'
-					sh 'cd python-flask-rest-api/ && docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
+		sh 'cd python-flask-rest-api/ && docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
+echo 'I want to push Docker Image'
+                 sh 'docker push igwubor/python-rest-api:${BUILD_NUMBER}'
+echo 'i have  pushed Docker Image'
 				}
 			}
 		}
