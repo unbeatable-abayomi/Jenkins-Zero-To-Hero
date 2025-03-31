@@ -15,7 +15,7 @@ pipeline {
     sh 'ls -ltr'
 
 		git branch: 'main', url: 'https://github.com/unbeatable-abayomi/Jenkins-Zero-To-Hero.git'
-sh 'cd python-flask-rest-api'
+sh 'cd python-flask-rest-api/'
  sh 'ls -ltr'
 sh 'docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
 		   }
