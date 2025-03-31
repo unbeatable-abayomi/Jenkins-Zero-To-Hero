@@ -21,7 +21,8 @@ pipeline {
 			steps{
 				script{
 					sh '''
-					echo 'Buid Docker Image'
+					echo 'Build Docker Image'
+                                        sh 'ls -ltr'
 					sh 'cd python-flask-rest-api && docker build -t igwubor/python-rest-api:${BUILD_NUMBER} .'
 					
 					'''
