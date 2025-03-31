@@ -68,6 +68,7 @@ withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
 					git config user.email "igwubor@outlook.com"
 					git config user.name "unbeatable-abayomi"
 					BUILD_NUMBER=${BUILD_NUMBER}
+                                        ls -ltr
 					sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" python-flask-rest-api-manifests/deployment.yml
 					git add python-flask-rest-api-manifests/deployment.yml
 					git commit -m "Update deployment image to version ${BUILD_NUMBER}"
