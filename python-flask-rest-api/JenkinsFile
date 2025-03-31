@@ -20,7 +20,7 @@ pipeline {
 	      environment {
 		       DOCKER_IMAGE = "igwubor/python-rest-api:${BUILD_NUMBER}"
 		// DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
-		       REGISTRY_CREDENTIALS = credentials('docker-cred')
+		       REGISTRY_CREDENTIALS = credentials('e0135cac-38b5-4e0d-aaa5-c145daf28580')
 	            }
 			steps{
 				script{
