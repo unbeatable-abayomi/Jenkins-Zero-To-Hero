@@ -11,7 +11,7 @@ def helloworld():
 
 
 @app.route('/data', methods=['GET'])
-def helloworld():
+def hellodata():
 	if(request.method == 'GET'):
 		data = {"data": "Hi I am working"}
 		return jsonify(data)
